@@ -56,8 +56,8 @@ export function RouteMap({ stops, routeCoordinates, selectedStopId, onStopSelect
     if (!mapRef.current || mapInstanceRef.current) return
 
     const map = L.map(mapRef.current, {
-      center: [38.572, -121.460],
-      zoom: 13,
+      center: [38.5758, -121.477],
+      zoom: 15,
       zoomControl: false,
     })
 

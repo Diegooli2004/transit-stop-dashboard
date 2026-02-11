@@ -95,43 +95,15 @@ function generateAmenities(seed: number, tier: "high" | "mid" | "low" | "none") 
   }
 }
 
-// All 54 real stops from SacRT Route 030 - J Street
+// 7 stops on SacRT Route 030 J Street (Outbound) — 16th St to 28th St
 const RAW_STOPS: { name: string; id: string; lat: number; lon: number; direction: "Inbound" | "Outbound" }[] = [
-  // Inbound only (34 stops: Amtrak Depot -> CSUS)
-  { name: "AMTRAK & DEPOT (WB)", id: "282", lat: 38.5845, lon: -121.5002, direction: "Inbound" },
-  { name: "5TH ST & I ST (NB)", id: "281", lat: 38.5830, lon: -121.4996, direction: "Inbound" },
-  { name: "J ST & 6TH ST (EB)", id: "413", lat: 38.5821, lon: -121.4981, direction: "Inbound" },
-  { name: "J ST & 7TH ST (EB)", id: "414", lat: 38.5816, lon: -121.4968, direction: "Inbound" },
-  { name: "J ST & 8TH ST (EB)", id: "415", lat: 38.5812, lon: -121.4955, direction: "Inbound" },
-  { name: "J ST & 9TH ST (EB)", id: "416", lat: 38.5807, lon: -121.4944, direction: "Inbound" },
-  { name: "J ST & 10TH ST (EB)", id: "417", lat: 38.5802, lon: -121.4933, direction: "Inbound" },
-  { name: "J ST & 11TH ST (EB)", id: "418", lat: 38.5798, lon: -121.4917, direction: "Inbound" },
-  { name: "J ST & 13TH ST (EB)", id: "419", lat: 38.5792, lon: -121.4898, direction: "Inbound" },
-  { name: "J ST & 15TH ST (EB)", id: "420", lat: 38.5784, lon: -121.4865, direction: "Inbound" },
-  { name: "J ST & 17TH ST (EB)", id: "421", lat: 38.5777, lon: -121.4839, direction: "Inbound" },
-  { name: "J ST & 19TH ST (EB)", id: "1718", lat: 38.5768, lon: -121.4808, direction: "Inbound" },
-  { name: "J ST & 21ST ST (EB)", id: "422", lat: 38.5761, lon: -121.4780, direction: "Inbound" },
-  { name: "J ST & 23RD ST (EB)", id: "423", lat: 38.5754, lon: -121.4752, direction: "Inbound" },
-  { name: "ALHAMBRA BLVD & K ST (SB)", id: "1705", lat: 38.5743, lon: -121.4720, direction: "Inbound" },
-  { name: "J ST & 29TH ST (EB)", id: "424", lat: 38.5738, lon: -121.4690, direction: "Inbound" },
-  { name: "J ST & 33RD ST (EB)", id: "425", lat: 38.5725, lon: -121.4645, direction: "Inbound" },
-  { name: "J ST & 35TH ST (EB)", id: "426", lat: 38.5718, lon: -121.4620, direction: "Inbound" },
-  { name: "J ST & 37TH ST (EB)", id: "427", lat: 38.5711, lon: -121.4593, direction: "Inbound" },
-  { name: "J ST & 39TH ST (EB)", id: "428", lat: 38.5703, lon: -121.4565, direction: "Inbound" },
-  { name: "J ST & 41ST ST (EB)", id: "429", lat: 38.5696, lon: -121.4538, direction: "Inbound" },
-  { name: "J ST & 43RD ST (EB)", id: "430", lat: 38.5689, lon: -121.4510, direction: "Inbound" },
-  { name: "J ST & 45TH ST (EB)", id: "431", lat: 38.5682, lon: -121.4483, direction: "Inbound" },
-  { name: "J ST & 47TH ST (EB)", id: "432", lat: 38.5675, lon: -121.4455, direction: "Inbound" },
-  { name: "J ST & 49TH ST (EB)", id: "433", lat: 38.5668, lon: -121.4428, direction: "Inbound" },
-  { name: "J ST & 51ST ST (EB)", id: "434", lat: 38.5662, lon: -121.4400, direction: "Inbound" },
-  { name: "J ST & 53RD ST (EB)", id: "435", lat: 38.5656, lon: -121.4372, direction: "Inbound" },
-  { name: "J ST & 55TH ST (EB)", id: "436", lat: 38.5650, lon: -121.4345, direction: "Inbound" },
-  { name: "J ST & 56TH ST (EB)", id: "437", lat: 38.5648, lon: -121.4330, direction: "Inbound" },
-  { name: "FOLSOM BLVD & HORNET DR (EB)", id: "270", lat: 38.5624, lon: -121.4265, direction: "Inbound" },
-  { name: "FOLSOM BLVD & COLLEGE TOWN DR (EB)", id: "271", lat: 38.5611, lon: -121.4235, direction: "Inbound" },
-  { name: "STATE UNIV DR SOUTH & COLLEGE TOWN DR (NB)", id: "273", lat: 38.5604, lon: -121.4220, direction: "Inbound" },
-  { name: "STATE UNIV DR NORTH & JED SMITH DR (SB)", id: "274", lat: 38.5595, lon: -121.4210, direction: "Inbound" },
-  { name: "CARLSON DR & STATE UNIV DRIVE NORTH (EB)", id: "275", lat: 38.5585, lon: -121.4195, direction: "Inbound" },
+  { name: "J ST & 16TH ST (EB)", id: "1716", lat: 38.577968, lon: -121.484995, direction: "Outbound" },
+  { name: "J ST & 18TH ST (EB)", id: "1717", lat: 38.577412, lon: -121.482898, direction: "Outbound" },
+  { name: "J ST & 19TH ST (EB)", id: "1718", lat: 38.576844, lon: -121.480795, direction: "Outbound" },
+  { name: "J ST & 22ND ST (EB)", id: "1720", lat: 38.575857, lon: -121.477049, direction: "Outbound" },
+  { name: "J ST & 25TH ST (EB)", id: "1721", lat: 38.574814, lon: -121.473081, direction: "Outbound" },
+  { name: "J ST & 27TH ST (EB)", id: "1722", lat: 38.574051, lon: -121.470294, direction: "Outbound" },
+  { name: "J ST & 28TH ST (EB)", id: "1723", lat: 38.573724, lon: -121.469031, direction: "Outbound" },
 ]
 
 // Assign statuses and survey dates deterministically
@@ -181,102 +153,69 @@ export const stops: Stop[] = RAW_STOPS.map((raw, i) => {
 export const recentActivity: ActivityItem[] = [
   {
     id: "a1",
-    stopId: "282",
-    stopName: "AMTRAK & DEPOT (WB)",
+    stopId: "1716",
+    stopName: "J ST & 16TH ST (EB)",
     timestamp: "2024-02-10T14:30:00Z",
     type: "survey",
-    description: "Route survey completed - 5 amenities detected at depot",
+    description: "Route survey completed - 5 amenities detected",
   },
   {
     id: "a2",
-    stopId: "417",
-    stopName: "J ST & 10TH ST (EB)",
+    stopId: "1718",
+    stopName: "J ST & 19TH ST (EB)",
     timestamp: "2024-02-10T14:35:00Z",
     type: "survey",
     description: "Route survey completed - 4 amenities detected",
   },
   {
     id: "a3",
-    stopId: "1705",
-    stopName: "ALHAMBRA BLVD & K ST (SB)",
+    stopId: "1720",
+    stopName: "J ST & 22ND ST (EB)",
     timestamp: "2024-02-09T10:20:00Z",
     type: "amenity-change",
     description: "Shelter no longer detected at this stop",
   },
   {
     id: "a4",
-    stopId: "430",
-    stopName: "J ST & 43RD ST (EB)",
+    stopId: "1722",
+    stopName: "J ST & 27TH ST (EB)",
     timestamp: "2024-02-08T16:10:00Z",
     type: "alert",
     description: "Only 1 amenity detected - possible camera obstruction",
   },
   {
     id: "a5",
-    stopId: "275",
-    stopName: "CARLSON DR & STATE UNIV DRIVE NORTH (EB)",
+    stopId: "1723",
+    stopName: "J ST & 28TH ST (EB)",
     timestamp: "2024-02-07T09:00:00Z",
     type: "survey",
-    description: "End-of-line survey - 3 amenities detected near CSUS",
+    description: "End-of-segment survey - 3 amenities detected",
   },
   {
     id: "a6",
-    stopId: "420",
-    stopName: "J ST & 15TH ST (EB)",
+    stopId: "1717",
+    stopName: "J ST & 18TH ST (EB)",
     timestamp: "2024-02-06T11:45:00Z",
     type: "amenity-change",
     description: "New bike rack detected at midtown stop",
   },
   {
     id: "a7",
-    stopId: "434",
-    stopName: "J ST & 51ST ST (EB)",
+    stopId: "1721",
+    stopName: "J ST & 25TH ST (EB)",
     timestamp: "2024-02-05T08:30:00Z",
     type: "alert",
     description: "No amenities detected - stop may need field verification",
   },
 ]
 
-// Route polyline: Inbound path from Amtrak Depot east on J St, then SE on Folsom Blvd to CSUS
+// Route polyline: 7 stops on J Street (Outbound) — 16th St to 28th St
 export const routeCoordinates: [number, number][] = [
-  // Amtrak Depot area - south on 5th St
-  [38.5845, -121.5002],
-  [38.5830, -121.4996],
-  // Turn east onto J Street
-  [38.5821, -121.4981],
-  [38.5816, -121.4968],
-  [38.5812, -121.4955],
-  [38.5807, -121.4944],
-  [38.5802, -121.4933],
-  [38.5798, -121.4917],
-  [38.5792, -121.4898],
-  // J Street through Midtown - gentle SE diagonal
-  [38.5784, -121.4865],
-  [38.5777, -121.4839],
-  [38.5768, -121.4808],
-  [38.5761, -121.4780],
-  [38.5754, -121.4752],
-  [38.5743, -121.4720],
-  [38.5738, -121.4690],
-  // J Street through East Sacramento
-  [38.5725, -121.4645],
-  [38.5718, -121.4620],
-  [38.5711, -121.4593],
-  [38.5703, -121.4565],
-  [38.5696, -121.4538],
-  [38.5689, -121.4510],
-  [38.5682, -121.4483],
-  [38.5675, -121.4455],
-  [38.5668, -121.4428],
-  [38.5662, -121.4400],
-  [38.5656, -121.4372],
-  [38.5650, -121.4345],
-  [38.5648, -121.4330],
-  // Transition to Folsom Blvd - curves south-east to CSUS
-  [38.5640, -121.4305],
-  [38.5624, -121.4265],
-  [38.5611, -121.4235],
-  [38.5604, -121.4220],
-  [38.5595, -121.4210],
-  [38.5585, -121.4195],
+  [38.577968, -121.484995], // 1716
+  [38.577412, -121.482898], // 1717
+  [38.576844, -121.480795], // 1718
+  [38.575857, -121.477049], // 1720
+  [38.574814, -121.473081], // 1721
+  [38.574051, -121.470294], // 1722
+  [38.573724, -121.469031], // 1723
 ]
