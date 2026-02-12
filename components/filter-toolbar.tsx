@@ -54,7 +54,7 @@ export function FilterToolbar({
           <SelectTrigger className="h-9 w-[160px] text-xs">
             <SelectValue placeholder="Amenity filter" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="z-[1000]">
             <SelectItem value="all">All Amenities</SelectItem>
             {Object.entries(AMENITY_LABELS).map(([key, label]) => (
               <SelectItem key={key} value={key}>
@@ -72,7 +72,7 @@ export function FilterToolbar({
         <SelectTrigger className="h-9 w-[150px] text-xs">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="z-[1000]">
           <SelectItem value="all">All Statuses</SelectItem>
           <SelectItem value="recent">Recent</SelectItem>
           <SelectItem value="needs-update">Needs Update</SelectItem>

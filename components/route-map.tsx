@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import type { Stop } from "@/lib/mock-data"
+import { AMENITY_LABELS } from "@/lib/mock-data"
 import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 
@@ -37,6 +38,30 @@ function createStopIcon(status: string, isSelected: boolean) {
     iconSize: [size + border * 2, size + border * 2],
     iconAnchor: [(size + border * 2) / 2, (size + border * 2) / 2],
   })
+}
+
+function escapeHtml(text: string): string {
+  const el = document.createElement("div")
+  el.textContent = text
+  return el.innerHTML
+}
+
+function getStopHoverContent(stop: Stop): string {
+  const name = escapeHtml(stop.name)
+  const detected = Object.entries(stop.amenities)
+    .filter(([, v]) => v.detected)
+    .map(([key]) => AMENITY_LABELS[key] || key)
+  const amenityText = detected.length > 0 ? detected.join(", ") : "No amenities detected"
+  const imgHtml = stop.imageUrl
+    ? `<img src="${stop.imageUrl}" alt="" class="stop-hover-tooltip-img" />`
+    : ""
+  return `
+    <div class="stop-hover-tooltip-content">
+      <div class="stop-hover-tooltip-name">${name}</div>
+      ${imgHtml}
+      <div class="stop-hover-tooltip-amenities">${escapeHtml(amenityText)}</div>
+    </div>
+  `
 }
 
 export function RouteMap({ stops, routeCoordinates, selectedStopId, onStopSelect, amenityFilter }: RouteMapProps) {
@@ -99,10 +124,13 @@ export function RouteMap({ stops, routeCoordinates, selectedStopId, onStopSelect
         icon: createStopIcon(stop.status, isSelected),
       })
         .addTo(map)
-        .bindTooltip(stop.name, {
+        .bindTooltip(getStopHoverContent(stop), {
           direction: "top",
-          offset: [0, -10],
-          className: "stop-tooltip",
+          offset: [0, -12],
+          className: "stop-hover-tooltip",
+          permanent: false,
+          sticky: false,
+          interactive: true,
         })
         .on("click", () => {
           onStopSelect(stop.id)
@@ -138,11 +166,39 @@ export function RouteMap({ stops, routeCoordinates, selectedStopId, onStopSelect
         </span>
       </div>
       <style jsx global>{`
-        .stop-tooltip {
+        .stop-hover-tooltip {
           font-family: var(--font-inter), sans-serif;
           font-size: 12px;
-          padding: 4px 8px;
+          padding: 0;
+          border-radius: 8px;
+          border: 1px solid hsl(220, 13%, 89%);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          max-width: 200px;
+          overflow: hidden;
+          background: white;
+          pointer-events: auto;
+        }
+        .stop-hover-tooltip-content {
+          padding: 8px;
+        }
+        .stop-hover-tooltip-name {
+          font-weight: 600;
+          margin-bottom: 6px;
+          line-height: 1.2;
+          color: hsl(222, 18%, 14%);
+        }
+        .stop-hover-tooltip-img {
+          width: 100%;
+          height: 100px;
+          object-fit: cover;
           border-radius: 4px;
+          margin-bottom: 6px;
+          display: block;
+        }
+        .stop-hover-tooltip-amenities {
+          font-size: 11px;
+          color: hsl(220, 9%, 46%);
+          line-height: 1.3;
         }
         .custom-stop-marker {
           background: transparent !important;
