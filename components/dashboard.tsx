@@ -2,7 +2,8 @@
 
 import { useState, useCallback, useMemo } from "react"
 import dynamic from "next/dynamic"
-import { stops, recentActivity, routeCoordinates, AMENITY_LABELS } from "@/lib/mock-data"
+import { AMENITY_LABELS } from "@/lib/mock-data"
+import { useSurveyData } from "@/lib/data"
 import { StatsCards } from "@/components/stats-cards"
 import { AmenityCharts } from "@/components/amenity-charts"
 import { ActivityFeed } from "@/components/activity-feed"
@@ -28,6 +29,7 @@ const RouteMap = dynamic(
 )
 
 export function Dashboard() {
+  const { stops, recentActivity, routeCoordinates, loading, fromSurvey } = useSurveyData()
   const [selectedStopId, setSelectedStopId] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [amenityFilter, setAmenityFilter] = useState<string | null>(null)
@@ -55,11 +57,11 @@ export function Dashboard() {
     }
 
     return result
-  }, [searchQuery, amenityFilter, statusFilter])
+  }, [stops, searchQuery, amenityFilter, statusFilter])
 
   const selectedStop = useMemo(
     () => stops.find((s) => s.id === selectedStopId) || null,
-    [selectedStopId]
+    [stops, selectedStopId]
   )
 
   const handleStopSelect = useCallback((stopId: string) => {
@@ -120,7 +122,7 @@ export function Dashboard() {
     return dates.length > 0
       ? dates[0].toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
       : "N/A"
-  }, [])
+  }, [stops])
 
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-background">
@@ -137,6 +139,12 @@ export function Dashboard() {
             </div>
           </div>
           <div className="hidden items-center gap-2 text-xs text-muted-foreground sm:flex">
+            {loading && (
+              <span className="rounded bg-muted px-2 py-1">Loading survey data...</span>
+            )}
+            {!loading && fromSurvey && (
+              <span className="rounded bg-green-500/15 text-green-700 dark:text-green-400 px-2 py-1">Live data</span>
+            )}
             <span className="rounded bg-muted px-2 py-1">
               Last survey: <span className="font-medium text-foreground">{lastSurveyDate}</span>
             </span>

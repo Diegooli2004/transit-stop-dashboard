@@ -1,0 +1,344 @@
+{
+  "stops": [
+    {
+      "id": "1716",
+      "name": "J ST & 16TH ST (EB)",
+      "lat": 38.577968,
+      "lon": -121.484995,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1716.jpg"
+    },
+    {
+      "id": "1717",
+      "name": "J ST & 18TH ST (EB)",
+      "lat": 38.577412,
+      "lon": -121.482898,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1717.jpg"
+    },
+    {
+      "id": "1718",
+      "name": "J ST & 19TH ST (EB)",
+      "lat": 38.576844,
+      "lon": -121.480795,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1718.jpg"
+    },
+    {
+      "id": "1720",
+      "name": "J ST & 22ND ST (EB)",
+      "lat": 38.575857,
+      "lon": -121.477049,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1720.jpg"
+    },
+    {
+      "id": "1721",
+      "name": "J ST & 25TH ST (EB)",
+      "lat": 38.574814,
+      "lon": -121.473081,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1721.jpg"
+    },
+    {
+      "id": "1722",
+      "name": "J ST & 27TH ST (EB)",
+      "lat": 38.574051,
+      "lon": -121.470294,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1722.jpg"
+    },
+    {
+      "id": "1723",
+      "name": "J ST & 28TH ST (EB)",
+      "lat": 38.573724,
+      "lon": -121.469031,
+      "direction": "Outbound",
+      "lastSurveyed": "2026-02-12T20:42:49Z",
+      "status": "recent",
+      "amenities": {
+        "bench": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "shelter": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "lighting": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "bikeRack": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "trashCan": {
+          "detected": false,
+          "confidence": 0.0
+        },
+        "realtimeDisplay": {
+          "detected": false,
+          "confidence": 0.0
+        }
+      },
+      "imageUrl": "/stops/1723.jpg"
+    }
+  ],
+  "routeCoordinates": [
+    [
+      38.577968,
+      -121.484995
+    ],
+    [
+      38.577412,
+      -121.482898
+    ],
+    [
+      38.576844,
+      -121.480795
+    ],
+    [
+      38.575857,
+      -121.477049
+    ],
+    [
+      38.574814,
+      -121.473081
+    ],
+    [
+      38.574051,
+      -121.470294
+    ],
+    [
+      38.573724,
+      -121.469031
+    ]
+  ],
+  "recentActivity": [
+    {
+      "id": "a1",
+      "stopId": "1716",
+      "stopName": "J ST & 16TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a2",
+      "stopId": "1717",
+      "stopName": "J ST & 18TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a3",
+      "stopId": "1718",
+      "stopName": "J ST & 19TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a4",
+      "stopId": "1720",
+      "stopName": "J ST & 22ND ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a5",
+      "stopId": "1721",
+      "stopName": "J ST & 25TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a6",
+      "stopId": "1722",
+      "stopName": "J ST & 27TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    },
+    {
+      "id": "a7",
+      "stopId": "1723",
+      "stopName": "J ST & 28TH ST (EB)",
+      "timestamp": "2026-02-12T20:42:49Z",
+      "type": "survey",
+      "description": "Survey completed - 0 amenities detected"
+    }
+  ]
+}

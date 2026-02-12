@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { type Stop, AMENITY_LABELS } from "@/lib/mock-data"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
@@ -14,6 +15,11 @@ interface StopDetailPanelProps {
 }
 
 export function StopDetailPanel({ stop, onClose }: StopDetailPanelProps) {
+  const [imageLoadFailed, setImageLoadFailed] = useState(false)
+  useEffect(() => {
+    setImageLoadFailed(false)
+  }, [stop?.id])
+
   if (!stop) {
     return (
       <div className="flex h-full flex-col items-center justify-center px-6 py-12 text-center">
@@ -90,8 +96,17 @@ export function StopDetailPanel({ stop, onClose }: StopDetailPanelProps) {
               <Camera className="h-3.5 w-3.5 text-muted-foreground" />
               <span className="text-xs font-medium text-foreground">Latest Capture</span>
             </div>
-            <div className="rounded-lg bg-muted flex items-center justify-center h-32 text-xs text-muted-foreground">
-              Camera image placeholder
+            <div className="rounded-lg overflow-hidden bg-muted flex items-center justify-center h-32 min-h-32">
+              {imageLoadFailed ? (
+                <span className="text-xs text-muted-foreground">Image unavailable</span>
+              ) : (
+                <img
+                  src={stop.imageUrl}
+                  alt={`Latest capture for ${stop.name}`}
+                  className="h-32 w-full object-cover"
+                  onError={() => setImageLoadFailed(true)}
+                />
+              )}
             </div>
           </div>
         ) : null}
